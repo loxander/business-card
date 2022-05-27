@@ -1,0 +1,245 @@
+
+/** GLOBALES **/
+
+*, *::after, *::before {
+    font-size: 62.5%; /** 1REM = 1PX**/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+p, label{
+    font-size: 2rem;
+}
+
+label{
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+svg{
+    color: black;
+}
+
+.location, .number, .email{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+/**Utilities**/
+
+.text-bold{
+    font-weight: bold;
+    font-size: 2rem;
+}
+/** Event onclick **/
+
+
+#perfil:checked + .container-perfil{
+    visibility: visible;
+    opacity: 1;
+}
+
+#estudios:checked + .container-estudios{
+    visibility: visible; 
+    opacity: 1;
+}
+
+#experiencia:checked + .container-experiencia{
+    visibility: visible;
+    opacity: 1;
+}
+
+#contacto:checked + .container-contacto{
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background:  url(../img/fondo.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/** Perfil Styles **/
+.container-perfil{
+    max-width: 40rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, #FFF 60%, #E0B66C 70%);
+    box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(255, 255, 255, 0.411);
+    position: absolute;
+    top: 5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    margin: 1.5rem;
+
+}
+
+.container-estudios{
+    max-width: 40rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, #FFF 60%, #E0B66C 85%);
+    box-shadow: 0.1rem 0rem 0.5rem 0.5rem rgba(255, 255, 255, 0.411);
+    position: absolute;
+    top: 5rem;
+    visibility: hidden;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+
+.container-experiencia{
+    width: 40rem;
+    max-width: 40rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, #FFF 60%, #E0B66C 70%);
+    box-shadow: 0.1rem 0rem 0.5rem 0.5rem rgba(255, 255, 255, 0.411);
+    position: absolute;
+    top: 5rem;
+    visibility: hidden;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+
+.container-contacto{
+    width: 40rem;
+    max-width: 40rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, #FFF 60%, #E0B66C 70%);
+    box-shadow: 0.1rem 0rem 0.5rem 0.5rem rgba(255, 255, 255, 0.411);
+    position: absolute;
+    top: 5rem;
+    visibility: hidden;
+
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+}
+
+/* EFECTO DE PESTANA SELECCIONADA*/
+
+.border-perfil{
+    box-shadow: 0 0 1rem 0.5rem #E0B66C;
+    background-color: #E0B66C;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+
+.border-studies{
+    box-shadow: 0 0 1rem 0.5rem #E0B66C;
+    background-color: #E0B66C;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+
+label.border-studies:hover{
+    box-shadow: 0 0 1rem 0.5rem #E0B66C;
+    background-color: #E0B66C;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+
+.border-experience{
+    box-shadow: 0 0 1rem 0.5rem #E0B66C;
+    background-color: #E0B66C;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+
+.border-contact{
+    box-shadow: 0 0 1rem 0.5rem #E0B66C;
+    background-color: #E0B66C;
+    border-radius: 40%;
+    padding: 0.5rem;
+}
+
+/* fin */
+
+.foto{
+    width: 10rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.foto img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.name{
+    text-align: center;
+}
+
+.name span{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.description{
+    max-width: 40rem;
+    text-align: left;
+    margin: 0 3rem;
+
+}
+
+.title{
+    font-weight: bold;
+    font-size: 2rem; 
+}
+
+.social-media{
+    width: 20rem;
+    display: flex;
+    margin: 3rem 2rem;
+    justify-content: space-around;
+}
+
+.bottom-menu{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+/** TAB STUDIES **/
+
+.foto-estudios{
+    display: flex;
+
+}
+
+.foto-estudios img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin: 1rem;
+    box-shadow: 0.1rem 1rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.orden-estudios{
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding-bottom: 3rem;
+}
+
+/** TAB EXPERIENCE **/
+
+.orden-experiencia{
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(1, 1fr);
+    padding-bottom: 3rem;
+}
